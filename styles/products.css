@@ -13,7 +13,10 @@
   
 .card {
     --bs-card-border-color: unset;
-    --bs-card-border-radius: unset; 
+    --bs-card-border-radius: unset;
+    height: 100%; /* Задаем фиксированную высоту для элемента .card */
+    display: flex;
+    flex-direction: column;
 }
 
 .card-img-top {
@@ -24,5 +27,20 @@
   background-color: #ebe7d4;
   padding: unset;
   padding-top: 5px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
+.card-footer {
+  display: flex; /* Выравниваем кнопки по горизонтали */
+  align-items: center; /* Выравниваем кнопки по вертикали */
+  padding: unset;
+  padding-top: 10px;
+  background-color: #ebe7d4;
+  justify-content: flex-start;
+}
+
+.card-footer:last-child {
+  border-radius: unset;
+}
