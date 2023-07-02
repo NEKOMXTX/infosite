@@ -2,7 +2,8 @@
     color: #ebe7d4;
     background-color:black;
     font-weight: bolder;
-    --bs-btn-border-color: unset
+    --bs-btn-border-color: unset;
+    --bs-btn-border-radius: unset;
     /* Другие стили */
   }
 
@@ -11,7 +12,12 @@
 }
   
 .card {
-    --bs-card-border-color: unset
+    --bs-card-border-color: unset;
+    --bs-card-border-radius: unset; 
+}
+
+.card-img-top {
+    border-radius: unset;
 }
 
 .card-body {
@@ -19,3 +25,4 @@
   padding: unset;
   padding-top: 5px;
 }
+
