@@ -16,4 +16,6 @@
 
 .card-body {
   background-color: #ebe7d4;
+  padding: unset;
+  padding-top: 5px;
 }
