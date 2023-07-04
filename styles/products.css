@@ -46,3 +46,8 @@
 .card-footer:last-child {
   border-radius: unset;
 }
+
+#container2 {
+  opacity: 0;
+  margin-bottom: 30px;
+}
