@@ -4,6 +4,8 @@
     font-weight: bolder;
     --bs-btn-border-color: unset;
     --bs-btn-border-radius: unset;
+    --bs-btn-active-bg: rgb(61, 61, 61);
+    --bs-btn-active-color: #ebe7d4;
     /* Другие стили */
   }
 
