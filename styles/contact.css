@@ -1,0 +1,7 @@
+#container2 {
+    opacity: 0;
+  }
+
+#contact .card:hover i,#contact .card:hover h4{
+	color: rgb(0, 0, 0)
+}
