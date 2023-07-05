@@ -1,7 +1,6 @@
 .btn.btn-primary {
     color: #ebe7d4;
     background-color:black;
-    font-weight: bolder;
     --bs-btn-border-color: unset;
     --bs-btn-border-radius: unset;
     --bs-btn-active-bg: rgb(61, 61, 61);
