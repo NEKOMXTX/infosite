@@ -1,0 +1,26 @@
+  a.nav-link.active {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+  }
+  
+  p, a.btn.btn-primary {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+  }
+
+  .fs-1 {
+    font-size: 3rem!important;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900; 
+    line-height: 1;
+  }
+
+  h4 {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 700;
+  }
+
+  h5 {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 500;
+  }
