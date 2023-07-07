@@ -8,8 +8,8 @@
     font-weight: 400;
   }
 
-  .fs-1 {
-    font-size: 3rem!important;
+  h1 {
+    font-size: 4vmax;
     font-family: 'Roboto', sans-serif;
     font-weight: 900; 
     line-height: 1;
