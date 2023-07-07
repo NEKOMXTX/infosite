@@ -6,3 +6,13 @@
 h4 {
   margin-top: 3rem;
 }
+
+.d-flex {
+  display: unset !important;
+}
+
+.card-footer {
+  background-color: unset;
+  border-top: 0;
+}
+
