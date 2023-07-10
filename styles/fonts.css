@@ -9,11 +9,18 @@
   }
 
   h1 {
-    font-size: 4vmax;
+    font-size: 350%;
     font-family: 'Roboto', sans-serif;
     font-weight: 900; 
     line-height: 1;
   }
+
+  @media screen and (max-width: 700px) {
+    h1 {
+      font-size: 275%;
+    }
+  }
+
 
   h4 {
     font-family: 'Roboto', sans-serif; 
