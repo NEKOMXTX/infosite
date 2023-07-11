@@ -7,11 +7,6 @@
     --bs-btn-active-color: #ebe7d4;
     /* Другие стили */
   }
-  
-  .btn {
-    --bs-btn-padding-x: 0.55rem;
-    --bs-btn-padding-y: 0.275rem;
-  }
 
 .col {
     padding-top: 10px;
