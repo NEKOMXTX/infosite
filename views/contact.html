@@ -66,7 +66,7 @@
                                     style="background-color: #f7f5ee;">
                                     <div
                                         style="height: 268.45px; display: flex; justify-content: center; align-items: center;">
-                                        <i class="fa fa-map-marker fa-5x mb-3" aria-hidden="true"></i>
+                                        <i class="fa fa-map-marker fa-5x mb-3" loading="lazy" aria-hidden="true"></i>
                                     </div>
                                     <div class="card-footer pb-0" style="background-color: #f7f5ee;">
                                         <h5 class="text-uppercase mt-0">Адрес</h5>
@@ -82,7 +82,7 @@
                                     style="background-color: #f7f5ee;">
                                     <div
                                         style="height: 268.45px; display: flex; justify-content: center; align-items: center;">
-                                        <i class="fa fa-globe fa-5x mb-3" aria-hidden="true"></i>
+                                        <i class="fa fa-globe fa-5x mb-3" loading="lazy" aria-hidden="true"></i>
                                     </div>
                                     <div class="card-footer" style="background-color: #f7f5ee;">
                                         <h5 class="text-uppercase mt-0">email</h5>
@@ -97,7 +97,7 @@
                                     style="background-color: #f7f5ee;">
                                     <div
                                         style="height: 268.45px; display: flex; justify-content: center; align-items: center;">
-                                        <i class="fa fa-phone fa-5x mb-3" aria-hidden="true"></i>
+                                        <i class="fa fa-phone fa-5x mb-3" loading="lazy" aria-hidden="true"></i>
                                     </div>
                                     <div class="card-footer" style="background-color: #f7f5ee;">
                                         <h5 class="text-uppercase mt-0">телефон<br>(whatsapp)</h5>
@@ -112,7 +112,7 @@
                                     style="background-color: #f7f5ee;">
                                     <div
                                         style="min-height: 268.45px; display: flex; justify-content: center; align-items: center;">
-                                        <img src="/gendir.jpg" class="img-fluid">
+                                        <img src="/gendir.jpg" loading="lazy" class="img-fluid">
                                     </div>
                                     <div class="card-footer" style="background-color: #f7f5ee;">
                                         <h5 class="text-uppercase mt-0">Генеральный директор</h5>
@@ -132,15 +132,24 @@
 
     </div>
     <script>
-        const card = document.querySelectorAll('.card');
 
-        card.forEach((element, index) => {
-            anime({
-                targets: element,
-                opacity: 1,
-                duration: 1500,
-                easing: 'easeInOutQuad',
-                delay: index * 200,
+        const images = document.querySelectorAll('img');
+
+        images.forEach((image) => {
+            image.addEventListener('load', () => {
+                image.style.opacity = '1';
+
+                const card = document.querySelectorAll('.card');
+
+                card.forEach((element, index) => {
+                    anime({
+                        targets: element,
+                        opacity: 1,
+                        duration: 1500,
+                        easing: 'easeInOutQuad',
+                        delay: index * 200,
+                    });
+                });
             });
         });
     </script>
