@@ -47,8 +47,17 @@
 }
 
 #container2 {
-  opacity: 0;
+
   margin-bottom: 30px;
+}
+
+.col {
+  opacity: 0;
+}
+
+img {
+
+  background-color: #ebe7d4;
 }
 
 

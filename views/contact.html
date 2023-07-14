@@ -132,13 +132,25 @@
 
     </div>
     <script>
-        const container2 = document.querySelectorAll('#container2');
 
-        anime({
-            targets: container2,
-            opacity: 1,
-            duration: 1500,
-            easing: 'easeInOutQuad',
+        const images = document.querySelectorAll('img');
+
+        images.forEach((image) => {
+            image.addEventListener('load', () => {
+                image.style.opacity = '1';
+
+                const card = document.querySelectorAll('.card');
+
+                card.forEach((element, index) => {
+                    anime({
+                        targets: element,
+                        opacity: 1,
+                        duration: 1500,
+                        easing: 'easeInOutQuad',
+                        delay: index * 200,
+                    });
+                });
+            });
         });
     </script>
 </body>

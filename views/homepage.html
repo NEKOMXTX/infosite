@@ -12,11 +12,14 @@
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js" integrity="sha512-e2WVdoOGqKU97DHH6tYamn+eAwLDpyHKqPy4uSv0aGlwDXZKGwyS27sfiIUT8gpZ88/Lr4UZpbRt93QkGRgpug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.2.0/jquery.fittext.min.js"
+    integrity="sha512-e2WVdoOGqKU97DHH6tYamn+eAwLDpyHKqPy4uSv0aGlwDXZKGwyS27sfiIUT8gpZ88/Lr4UZpbRt93QkGRgpug=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Roboto:wght@500;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="/homepage.css">
   <link rel="stylesheet" href="/fonts.css">
 </head>
@@ -39,10 +42,12 @@
                 <a class="nav-link active" aria-current="page" href="/" style="padding: 20px 60px 20px 3px;">ГЛАВНАЯ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/products" style="padding: 20px 60px 20px 3px;">КАТАЛОГ</a>
+                <a class="nav-link active" aria-current="page" href="/products"
+                  style="padding: 20px 60px 20px 3px;">КАТАЛОГ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="/contact" style="padding: 20px 60px 20px 3px;">КОНТАКТЫ</a>
+                <a class="nav-link active" aria-current="page" href="/contact"
+                  style="padding: 20px 60px 20px 3px;">КОНТАКТЫ</a>
               </li>
             </ul>
           </div>
@@ -90,13 +95,25 @@
     </div>
   </div>
   <script>
-    const container2 = document.querySelectorAll('#container2');
 
-    anime({
-      targets: container2,
-      opacity: 1,
-      duration: 1500,
-      easing: 'easeInOutQuad',
+    const images = document.querySelectorAll('img');
+
+    images.forEach((image) => {
+      image.addEventListener('load', () => {
+        image.style.opacity = '1';
+
+        const col = document.querySelectorAll('.col');
+
+        col.forEach((element, index) => {
+          anime({
+            targets: element,
+            opacity: 1,
+            duration: 1500,
+            easing: 'easeInOutQuad',
+            delay: index * 200,
+          });
+        });
+      });
     });
   </script>
 </body>
