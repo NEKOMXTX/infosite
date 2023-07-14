@@ -127,13 +127,6 @@
     </div>
   </div>
   <script>
-
-    const images = document.querySelectorAll('img');
-
-    images.forEach((image) => {
-      image.addEventListener('load', () => {
-        image.style.opacity = '1';
-        
         const col = document.querySelectorAll('.col');
 
         col.forEach((element, index) => {
@@ -145,8 +138,6 @@
             delay: index * 200,
           });
         });
-      });
-    });
   </script>
 
 </body>

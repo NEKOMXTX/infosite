@@ -92,23 +92,15 @@
   </div>
   <script>
 
-    const images = document.querySelectorAll('img');
+    const col = document.querySelectorAll('.col');
 
-    images.forEach((image) => {
-      image.addEventListener('load', () => {
-        image.style.opacity = '1';
-
-        const col = document.querySelectorAll('.col');
-
-        col.forEach((element, index) => {
-          anime({
-            targets: element,
-            opacity: 1,
-            duration: 1500,
-            easing: 'easeInOutQuad',
-            delay: index * 200,
-          });
-        });
+    col.forEach((element, index) => {
+      anime({
+        targets: element,
+        opacity: 1,
+        duration: 1500,
+        easing: 'easeInOutQuad',
+        delay: index * 200,
       });
     });
   </script>
