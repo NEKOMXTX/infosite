@@ -1,8 +1,13 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const NodeCache = require('node-cache');
+
+const cache = new NodeCache({ stdTTL: 3600 }); // Время жизни кэша - 1 час (в секундах)
 
 const PORT = 3000;
+
+const createPath = (page) => path.resolve(__dirname, 'views', `${page}.html`);
 
 const server = http.createServer((req, res) => {
   console.log('Server request');
@@ -10,22 +15,17 @@ const server = http.createServer((req, res) => {
 
   res.setHeader('Content-Type', 'text/html');
 
-  const createPath = (page) => path.resolve(__dirname, 'views', `${page}.html`);
-
   let basePath = '';
 
   switch (req.url) {
     case '/':
       basePath = createPath('homepage');
-      res.statusCode = 200;
       break;
     case '/products':
       basePath = createPath('products');
-      res.statusCode = 200;
       break;
     case '/contact':
       basePath = createPath('contact');
-      res.statusCode = 200;
       break;
     default:
       basePath = createPath('error');
@@ -33,18 +33,36 @@ const server = http.createServer((req, res) => {
       break;
   }
 
-  const fileStream = fs.createReadStream(basePath);
+  const cachedData = cache.get(basePath);
 
-  fileStream.on('open', () => {
+  if (cachedData) {
+    console.log('Данные получены из кэша');
     res.statusCode = 200;
-    fileStream.pipe(res);
-  });
+    res.end(cachedData);
+  } else {
+    const fileStream = fs.createReadStream(basePath);
 
-  fileStream.on('error', (err) => {
-    console.log(err);
-    res.statusCode = 500;
-    res.end();
-  });
+    fileStream.on('open', () => {
+      res.statusCode = 200;
+      fileStream.pipe(res);
+
+      let data = '';
+      fileStream.on('data', (chunk) => {
+        data += chunk;
+      });
+
+      fileStream.on('end', () => {
+        console.log('Генерация данных');
+        cache.set(basePath, data);
+      });
+    });
+
+    fileStream.on('error', (err) => {
+      console.log(err);
+      res.statusCode = 500;
+      res.end();
+    });
+  }
 });
 
 server.listen(PORT, 'localhost', (error) => {
