@@ -30,6 +30,10 @@ app.get('/products', (req, res) => {
     res.sendFile(createPath('products'));
 });
 
+app.get('/services', (req, res) => {
+    res.sendFile(createPath('services'));
+});
+
 app.get('/contact', (req, res) => {
     res.sendFile(createPath('contact'));
 });
