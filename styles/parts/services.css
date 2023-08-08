@@ -1,0 +1,26 @@
+#container2 {
+
+    padding: 0px 0px;
+  }
+
+h4 {
+  margin-top: 3rem;
+}
+
+.d-flex {
+  display: unset !important;
+}
+
+.card-footer {
+  background-color: unset;
+  border-top: 0;
+}
+
+.card {
+  opacity: 0;
+}
+
+img {
+
+  background-color: #ebe7d4;
+}
