@@ -22,6 +22,8 @@ app.use(express.static('scripts'));
 
 app.use(express.static('PDF files'));
 
+app.use(express.static('scripts'));
+
 app.get('/', (req, res) => {
     res.sendFile(createPath('homepage'));
 });
