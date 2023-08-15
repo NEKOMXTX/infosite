@@ -52,7 +52,7 @@
 }
 
 .col {
-  opacity: 0;
+  
 }
 
 img {
@@ -61,3 +61,7 @@ img {
 }
 
 
+.my-5 {
+  padding: 0px 12px;
+  margin-bottom: 0!important;
+}

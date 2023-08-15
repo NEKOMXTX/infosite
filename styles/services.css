@@ -17,10 +17,15 @@ h4 {
 }
 
 .card {
-  opacity: 0;
+  
 }
 
 img {
 
   background-color: #ebe7d4;
+}
+
+.my-5 {
+  padding: 0px 24px;
+  margin-bottom: 0!important;
 }
