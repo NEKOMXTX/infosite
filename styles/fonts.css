@@ -21,15 +21,31 @@
     }
   }
 
+  h2 {
+    font-size: 225%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+
+  h3 {
+    font-size: 170%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
 
   h4 {
     font-family: 'Roboto', sans-serif; 
-    font-weight: 700;
+    font-weight: 500;
   }
 
   h5 {
     font-family: 'Roboto', sans-serif; 
     font-weight: 500;
+  }
+
+  h6 {
+    font-family: 'Roboto', sans-serif; 
+    font-weight: 300;
   }
 
   img {
