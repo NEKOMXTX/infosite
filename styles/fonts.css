@@ -51,4 +51,8 @@
   img {
     background-color: #e7e2cb;
   }
+
+  .col-md-3#info a {
+    text-decoration: none;
+  }
   
