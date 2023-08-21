@@ -1,3 +1,7 @@
+body {
+  visibility: hidden;
+}
+
 .btn.btn-primary {
     color: #ebe7d4;
     background-color:black;
@@ -10,6 +14,7 @@
 
 .col {
     padding-top: 24px;
+    opacity: 0;
 }
 
 .card:hover {

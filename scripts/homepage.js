@@ -1,19 +1,35 @@
-const images = document.querySelectorAll('img');
+window.onload = function () {
+  const body = document.body;
+  body.style.visibility = 'visible'; // Показываем контент после полной загрузки
 
-images.forEach((image) => {
-  image.addEventListener('load', () => {
-    image.style.opacity = '1';
+  const images = document.querySelectorAll('img');
+  let loadedImages = 0;
 
-    const col = document.querySelectorAll('.col');
+  function checkAllImagesLoaded() {
+    loadedImages++;
+    if (loadedImages === images.length) {
+      body.style.visibility = 'visible'; // Показываем контент после загрузки всех изображений
+    }
+  }
 
-    col.forEach((element, index) => {
-      anime({
-        targets: element,
-        opacity: 1,
-        duration: 1500,
-        easing: 'easeInOutQuad',
-        delay: index * 200,
-      });
-    });
+  images.forEach((image) => {
+    if (image.complete) {
+      checkAllImagesLoaded();
+    } else {
+      image.addEventListener('load', checkAllImagesLoaded);
+    }
   });
-});
+      const col = document.querySelectorAll('.col');
+
+      col.forEach((element, index) => {
+        anime({
+          targets: element,
+          opacity: 1,
+          duration: 1500,
+          easing: 'easeInOutQuad',
+          delay: index * 200,
+        });
+      });
+};
+
+
