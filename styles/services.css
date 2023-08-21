@@ -35,8 +35,5 @@ img {
 }
 
 .card {
-  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавные переходы */
-  position: relative;
-  z-index: 0;
->>>>>>> 77842b46e48041d6ed9cd7768be26b5aefd1b435
+
 }
