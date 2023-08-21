@@ -19,9 +19,9 @@ window.onload = function () {
             image.addEventListener('load', checkAllImagesLoaded);
         }
     });
-    const cards = document.querySelectorAll('.card');
+    const cols = document.querySelectorAll('.col-md-6');
 
-    cards.forEach((element, index) => {
+    cols.forEach((element, index) => {
         anime({
             targets: element,
             opacity: 1,
