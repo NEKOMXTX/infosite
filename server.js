@@ -18,6 +18,8 @@ app.use(express.static('styles'));
 
 app.use(express.static('images'));
 
+app.use(express.static('icons'));
+
 app.use(express.static('scripts'));
 
 app.use(express.static('PDF files'));
